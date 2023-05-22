@@ -10,12 +10,16 @@
     <link href="assets/app.css" rel="stylesheet" />
 
     <!-- stylesheet -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.40.0/apexcharts.min.css" integrity="sha512-tJYqW5NWrT0JEkWYxrI4IK2jvT7PAiOwElIGTjALSyr8ZrilUQf+gjw2z6woWGSZqeXASyBXUr+WbtqiQgxUYg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link href="assets/css/font.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/js/plugin/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="assets/js/plugin/select2/select2.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/js/plugin/airdatepicker/datepicker.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
     <!-- favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 
@@ -25,7 +29,11 @@
 </head>
 
 <body>
-    <div id="app">Loading...</div>
+    <div id="app">
+        <div class="as_loader">
+            <img src="assets/images/loader.png" alt="" class="img-responsive" />
+        </div>
+    </div>
 
     <div id="blazor-error-ui">
         An unhandled error has occurred.
@@ -35,6 +43,9 @@
     <script src="_framework/blazor.webassembly.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
     <!-- javascript -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.40.0/apexcharts.min.js" integrity="sha512-Kr1p/vGF2i84dZQTkoYZ2do8xHRaiqIa7ysnDugwoOcG0SbIx98erNekP/qms/hBDiBxj336//77d0dv53Jmew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.js"></script>
     <script type="text/javascript" src="assets/js/plugin/slick/slick.min.js"></script>
@@ -43,6 +54,7 @@
     <script type="text/javascript" src="assets/js/plugin/airdatepicker/datepicker.min.js"></script>
     <script type="text/javascript" src="assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="js/custom.js"></script>
 </body>
 
 </html>
