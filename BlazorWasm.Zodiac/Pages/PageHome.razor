@@ -1,5 +1,4 @@
 ﻿@page "/"
-@inject IJSRuntime _jsRuntime
 
 <PageTitle>Zodiac</PageTitle>
 @if (_isLoading)
@@ -10,11 +9,10 @@
 }
 else
 {
-    <PageMain />
+    @* <PageMain /> *@
     <PageSearch />
     <PageHoroscopeSigns />
 }
-@* <div id="chart"></div> *@
 
 <!-- Modal -->
 <div id="as_login" class="modal fade" role="dialog">

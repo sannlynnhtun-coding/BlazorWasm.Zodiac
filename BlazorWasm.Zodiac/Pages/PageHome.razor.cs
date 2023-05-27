@@ -21,22 +21,5 @@ namespace BlazorWasm.Zodiac.Pages
                 // SetChart();
             }
         }
-
-        private async Task SetChart()
-        {
-            var sign = JsonData.ZodiacSigns[0];
-            var data = sign.Traits.Select(x => new ChartModel
-            {
-                data = x.Percentage,
-                label = x.Name,
-            }).ToList();
-            await _jsRuntime.InvokeVoidAsync
-            (
-                "radarChart", 
-                "#chart", 
-                "Personality Traits", 
-                data
-            );
-        }
     }
 }

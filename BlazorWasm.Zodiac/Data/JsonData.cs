@@ -162,7 +162,7 @@ namespace BlazorWasm.Zodiac.Data
           int index = 0;
           var sign = ZodiacSigns.FirstOrDefault(x => x.Name.ToLower() == name.ToLower());
           if (sign != null)
-            index = ZodiacSigns.IndexOf(sign);
+            index = ZodiacSigns.FindIndex(x => x.Name.ToLower() == name.ToLower());
           return (index, sign);
         }
     }
