@@ -15,8 +15,13 @@ public partial class PageSearch
     {
         if (firstRender)
         {
-            await _JsRuntime.InvokeVoidAsync("setDatePicker", "txtChooseDate");
+            await BindDatePicker();
         }
+    }
+
+    async Task BindDatePicker()
+    {
+        await _JsRuntime.InvokeVoidAsync("setDatePicker", "txtChooseDate");
     }
 
     async Task SearchDate()
@@ -34,7 +39,7 @@ public partial class PageSearch
 
     private async Task SetChart()
     {
-        await Task.Delay(TimeSpan.FromSeconds(2));
+        await Task.Delay(TimeSpan.FromMilliseconds(200));
         var data = _zodiacSign.Traits.Select(x => new ChartModel
         {
             data = x.Percentage,
@@ -42,10 +47,18 @@ public partial class PageSearch
         }).ToList();
         await _JsRuntime.InvokeVoidAsync
         (
-            "radarChart", 
-            "#chart", 
-            "Personality Traits", 
+            "radarChart",
+            "#chart",
+            "Personality Traits",
             data
         );
+    }
+
+    async Task Back()
+    {
+        _date = "";
+        _isSearch = false;
+        await Task.Delay(TimeSpan.FromMilliseconds(200));
+        await BindDatePicker();
     }
 }

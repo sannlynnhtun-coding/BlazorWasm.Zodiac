@@ -20,7 +20,7 @@
                             <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="form-group">
                                     @* <input type="date" placeholder="Choose Date" class="form-control as_datepicker"> *@
-                                    <input type="text" placeholder="Choose Date" id="txtChooseDate" class="form-control as_datepicker">
+                                    <input type="text" placeholder="Choose Date" @bind="_date" id="txtChooseDate" class="form-control as_datepicker">
                                     @* <span><img src="assets/images/svg/calendar.svg" alt=""></span> *@
                                 </div>
                                 <div class="col-lg-12" style="text-align: center;">
@@ -39,6 +39,9 @@ else
 {
     <section class="as_service_wrapper as_padderTop80 as_padderBottom80">
         <div class="container">
+            <div class="col-lg-12" style="text-align: center;">
+                <button class="as_btn" type="button" @onclick="Back">Back</button>
+            </div>
             <div class="row as_verticle_center">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="as_sign_box text-center">
