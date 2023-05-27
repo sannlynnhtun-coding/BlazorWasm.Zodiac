@@ -156,5 +156,14 @@ namespace BlazorWasm.Zodiac.Data
 
         public static List<ZodiacSignModel> ZodiacSigns => 
             JsonConvert.DeserializeObject<List<ZodiacSignModel>>(Zodiac);
+
+        public static (int, ZodiacSignModel) FindZodiacSign(string name)
+        {
+          int index = 0;
+          var sign = ZodiacSigns.FirstOrDefault(x => x.Name.ToLower() == name.ToLower());
+          if (sign != null)
+            index = ZodiacSigns.IndexOf(sign);
+          return (index, sign);
+        }
     }
 }

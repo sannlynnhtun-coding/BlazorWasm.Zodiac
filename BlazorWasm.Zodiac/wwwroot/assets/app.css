@@ -26,3 +26,27 @@
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+.datepicker-top-left, .datepicker-top-right {
+    border-top-color: #f37935;
+}
+
+.datepicker-top-left:before, .datepicker-top-right:before {
+    border-bottom-color: #f37835;
+}
+
+.datepicker-panel>ul>li.picked, .datepicker-panel>ul>li.picked:hover {
+    color: #f37d35;
+}
+
+.datepicker-panel>ul>li.highlighted:hover {
+    background-color: #ffedcc;
+}
+
+.datepicker-panel>ul>li:hover {
+    background-color: #ffedcc;
+}
+
+.datepicker-panel>ul>li.highlighted {
+    background-color: #ffedcc;
+}

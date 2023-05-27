@@ -4,7 +4,7 @@ namespace BlazorWasm.Zodiac.Services
 {
     public class ZodiacService
     {
-        public static EnumChineseZodiac GetChineseZodiac(int birthYear)
+        public EnumChineseZodiac GetChineseZodiac(int birthYear)
         {
             int startYear = 1900; // Start year of the Chinese zodiac cycle
             int offset = (birthYear - startYear) % 12; // Calculate the offset from the start year
@@ -14,7 +14,7 @@ namespace BlazorWasm.Zodiac.Services
             return zodiacSign;
         }
 
-        public static EnumZodiacSign GetHoroscope(DateTime birthDate)
+        public EnumZodiacSign GetHoroscope(DateTime birthDate)
         {
             int day = birthDate.Day;
             int month = birthDate.Month;

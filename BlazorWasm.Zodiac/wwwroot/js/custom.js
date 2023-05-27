@@ -62,3 +62,14 @@ window.radarChart = function (id, title, series) {
     var chart = new ApexCharts(document.querySelector(id), options);
     chart.render();
 }
+
+window.setDatePicker = function(id){
+    $('#' + id).datepicker({
+        format: 'dd-mm-yyyy',
+        autoHide: true
+    });
+}
+
+window.getDatePicker = function (id){
+    return $('#' + id).val();
+}
