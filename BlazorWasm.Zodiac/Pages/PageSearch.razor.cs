@@ -39,8 +39,8 @@ public partial class PageSearch
         (_index, _zodiacSign) = JsonData.FindZodiacSign(name);
         if (_zodiacSign == null) return;
         _isSearch = true;
-        await _JsRuntime.InvokeVoidAsync("scollTop0");
         await SetChart();
+        await _JsRuntime.InvokeVoidAsync("scollTop0");
     }
 
     private async Task SetChart()
