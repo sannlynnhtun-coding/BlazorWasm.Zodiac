@@ -63,13 +63,17 @@ window.radarChart = function (id, title, series) {
     chart.render();
 }
 
-window.setDatePicker = function(id){
+window.setDatePicker = function (id) {
     $('#' + id).datepicker({
         format: 'dd-mm-yyyy',
         autoHide: true
     });
 }
 
-window.getDatePicker = function (id){
+window.getDatePicker = function (id) {
     return $('#' + id).val();
+}
+
+window.scollTop0 = function (id) {
+    $(window).scrollTop(0);
 }

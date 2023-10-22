@@ -47,5 +47,40 @@ namespace BlazorWasm.Zodiac.Services
             else
                 throw new ArgumentException("Invalid birth date.");
         }
+
+        public EnumZodiacSign GetHoroscopeById(string id)
+        {
+
+            // Determine the Zodiac sign based on id
+            if (id == "1")
+                return EnumZodiacSign.Aries;
+            else if (id == "2")
+                return EnumZodiacSign.Taurus;
+            else if (id == "3")
+                return EnumZodiacSign.Gemini;
+            else if (id == "4")
+                return EnumZodiacSign.Cancer;
+            else if (id == "5")
+                return EnumZodiacSign.Leo;
+            else if (id == "6")
+                return EnumZodiacSign.Virgo;
+            else if (id == "7")
+                return EnumZodiacSign.Libra;
+            else if (id == "8")
+                return EnumZodiacSign.Scorpio;
+            else if (id == "9")
+                return EnumZodiacSign.Sagittarius;
+            else if (id == "10")
+                return EnumZodiacSign.Capricorn;
+            else if (id == "11")
+                return EnumZodiacSign.Aquarius;
+            else if (id == "12")
+                return EnumZodiacSign.Pisces;
+            else
+                throw new ArgumentException("Invalid birth date.");
+
+
+        }
+
     }
 }

@@ -31,10 +31,16 @@ public partial class PageSearch
         DateTime dt = Convert.ToDateTime($"{dateArr[2]}-{dateArr[1]}-{dateArr[0]}");
         var horoscope = _ZodiacService.GetHoroscope(dt);
         var chinese = _ZodiacService.GetChineseZodiac(dt.Year);
-        (_index, _zodiacSign) = JsonData.FindZodiacSign(horoscope.ToString());
+        await Sign(horoscope.ToString());
+    }
+
+    private async Task Sign(string name)
+    {
+        (_index, _zodiacSign) = JsonData.FindZodiacSign(name);
         if (_zodiacSign == null) return;
         _isSearch = true;
-        SetChart();
+        await _JsRuntime.InvokeVoidAsync("scollTop0");
+        await SetChart();
     }
 
     private async Task SetChart()
