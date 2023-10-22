@@ -61,9 +61,14 @@ else
                 <div class="row">
                     <div class="col-lg-3 col-md-4 col-sm-4">
                         <div class="as_service_box text-center" style="height: 95%;">
-                            <h3> ဒြပ် / ELEMENT </h3>
-                            <h3> @_zodiacSign.Element </h3>
-                            <img src="images/elements/@(_zodiacSign.Element).png" alt="">
+                            <h3> မြန်မာလ </h3>
+                            <h5> - </h5>
+                            <h3> @_zodiacSign.MyanmarMonth </h3>
+                            <h3> Sign </h3>
+                            <span class="as_sign">
+                                <img src="@(_zodiacSign.ZodiacSignImageUrl)" alt="" style="width:85px; height: 85px">
+                            </span>
+                            <img src="@(_zodiacSign.ZodiacSign2ImageUrl)" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
@@ -78,43 +83,58 @@ else
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-4">
                         <div class="as_service_box text-center" style="height: 95%;">
-                            <h3> မြန်မာလ </h3>
-                            <h5> - </h5>
-                            <h3> @_zodiacSign.MyanmarMonth </h3>
-                            <h3> Sign </h3>
-                            <span class="as_sign">
-                                <img src="@(_zodiacSign.ZodiacSignImageUrl)" alt="" style="width:85px; height: 85px">
-                            </span>
-                            <img src="@(_zodiacSign.ZodiacSign2ImageUrl)" alt="">
+                            <h3> ဒြပ် / ELEMENT </h3>
+                            <h3> @_zodiacSign.Element </h3>
+                            <img src="images/elements/@(_zodiacSign.Element).png" alt="">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="align-content-center">
-                <div class="as_customer_box text-center mb-2">
-                    <h1 class="as_heading as_heading_center">Life Purpose</h1>
-                    <h5 style="color:black; line-height: 1.5;">@_zodiacSign.LifePurpose</h5>
+                <div class="as_about_detail mb-2">
+                    <h1 class="as_heading as_heading_center mt-3">Life Purpose</h1>
+                    <div class="as_paragraph_wrapper">
+                        <p class="as_margin0 as_font14 as_padderBottom10"> @_zodiacSign.LifePurpose </p>
+                    </div>
                 </div>
-                <div class="as_customer_box text-center mb-2">
-                    <h1 class="as_heading as_heading_center">Loyal</h1>
-                    <h5 style="color:black; line-height: 1.5;">@_zodiacSign.Loyal</h5>
+                <div class="as_about_detail mb-2">
+                    <h1 class="as_heading as_heading_center mt-3">Loyal</h1>
+                    <div class="as_paragraph_wrapper">
+                        <p class="as_margin0 as_font14 as_padderBottom10"> @_zodiacSign.Loyal </p>
+                    </div>
                 </div>
-                <div class="as_customer_box text-center mb-2">
-                    <h1 class="as_heading as_heading_center">Angry</h1>
-                    <h5 style="color:black; line-height: 1.5;">@_zodiacSign.Angry</h5>
+                <div class="as_about_detail mb-2">
+                    <h1 class="as_heading as_heading_center mt-3">Angry</h1>
+                    <div class="as_paragraph_wrapper">
+                        <p class="as_margin0 as_font14 as_padderBottom10"> @_zodiacSign.Angry </p>
+                    </div>
                 </div>
-                <div class="as_customer_box text-center mb-2">
-                    <h1 class="as_heading as_heading_center">Character</h1>
-                    <h5 style="color:black; line-height: 1.5;">@_zodiacSign.Character</h5>
+                <div class="as_about_detail mb-2">
+                    <h1 class="as_heading as_heading_center mt-3">Character</h1>
+                    <div class="as_paragraph_wrapper">
+                        <p class="as_margin0 as_font14 as_padderBottom10"> @_zodiacSign.Character </p>
+                    </div>
                 </div>
-                <div class="as_customer_box text-center mb-2">
-                    <h1 class="as_heading as_heading_center">Pretty Features</h1>
-                    <h5 style="color:black; line-height: 1.5;">@_zodiacSign.PrettyFeatures</h5>
+                <div class="as_about_detail mb-2">
+                    <h1 class="as_heading as_heading_center mt-3">Pretty Features</h1>
+                    <div class="as_paragraph_wrapper">
+                        <p class="as_margin0 as_font14 as_padderBottom10"> @_zodiacSign.PrettyFeatures </p>
+                    </div>
                 </div>
-                <div class="as_customer_box text-center mb-2">
-                    <h1 class="as_heading as_heading_center">Representative Flower</h1>
-                    <h5 style="color:black; line-height: 1.5;">@_zodiacSign.RepresentativeFlower</h5><br>
-                    <img src="images/representative-flower/@(_index + 1).jpg" alt="" style="width:250px; height:250px">
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4 col-md-4">
+                    <div class="as_aboutimg text-right">
+                        <img src="images/representative-flower/@(_index + 1).jpg" alt="" style="height:auto">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <div class="as_about_detail">
+                        <h1 class="as_heading"> Representative Flower </h1>
+                        <div class="as_paragraph_wrapper">
+                            <p class="as_margin0 as_font14 as_padderBottom10"> @_zodiacSign.RepresentativeFlower </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
