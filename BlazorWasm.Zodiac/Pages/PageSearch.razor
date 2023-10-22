@@ -49,9 +49,9 @@
                 @for (int i = 1; i <= 12; i++)
                 {
                     var item = JsonData.ZodiacSigns[i - 1];
-                    <div class="col-lg-2 col-sm-4 col-xs-6">
+                    <div class="col-lg-2 col-sm-4 col-xs-6" @onclick=@(args => Sign(item.Name))>
                         <div class="as_sign_box text-center">
-                            <a href="javascript:;" @onclick=@(args => Sign(item.Name))>
+                            <a href="javascript:;">
                                 <span class="as_sign">
                                     <img src="assets/images/svg/horoscope/h@(i).svg" alt="">
                                 </span>

@@ -965,11 +965,11 @@ a,a:hover,a:focus,a:visited{
     -moz-animation: spin 9s infinite linear;
     z-index: -1;
 }
-.as_service_box:hover{
+/*.as_service_box:hover{
     background-image: -moz-linear-gradient( 0deg, rgb(244,170,54) 0%, rgb(243,115,53) 100%);
     background-image: -webkit-linear-gradient( 0deg, rgb(244,170,54) 0%, rgb(243,115,53) 100%);
     background-image: -ms-linear-gradient( 0deg, rgb(244,170,54) 0%, rgb(243,115,53) 100%);
-}
+}*/
 .as_service_box .as_icon svg{
     fill: var(--secondary-color);
     transition: none;
