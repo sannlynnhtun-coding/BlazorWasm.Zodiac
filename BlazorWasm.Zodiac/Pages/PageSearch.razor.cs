@@ -27,6 +27,7 @@ public partial class PageSearch
     async Task SearchDate()
     {
         _date = await _JsRuntime.InvokeAsync<string>("getDatePicker", "txtChooseDate");
+        if (string.IsNullOrEmpty(_date)) return;
         string[] dateArr = _date.Split("-");
         DateTime dt = Convert.ToDateTime($"{dateArr[2]}-{dateArr[1]}-{dateArr[0]}");
         var horoscope = _ZodiacService.GetHoroscope(dt);
